@@ -29,9 +29,12 @@ for seq_record in prot_db:
 # Load MAF
 #==============================================================================
 
+# Row that has the headers info
+headers_row = 0 # This can be > 0 depending on your file
+
 # Load
 FILE_MAF = '/path/to/your/maf.txt'
-maf = read_csv(FILE_MAF, sep='\t', header=(1)) # Check the headers row
+maf = read_csv(FILE_MAF, sep='\t', header=(headers_row))
 
 
 #==============================================================================
